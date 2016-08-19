@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container-fluid">
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div>
+      <h3>File Cabinet:</h3>
+      <br>
+      <% fileCabinet.forEach(function(fileCabinet) { %>
+        <dl class="dl-horizontal">
+          <dt>Title</dt><dd><%= fileCabinet.title %></dd>
+          <dt>Category</dt><dd><%= fileCabinet.category %></dd>
+          <dt>Link</dt><dd><%= fileCabinet.link %></dd>
+        </dl>
+      <% }) %>
+    </div>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>
