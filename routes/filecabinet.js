@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var FileCabinet = require('../models/filecabinet');
 
 function makeError(res, message, status) {
   res.statusCode = status;
@@ -23,7 +24,10 @@ let fileCabinet = [
 
 // INDEX
 router.get('/', function(req, res, next) {
-  res.render('fileCabinet/index', { fileCabinet: fileCabinet });
+  FileCabinet.find({})
+  .then(function(fileCabinet) {
+    res.render('filecabinet/index', { fileCabinet: fileCabinet });
+  });
 });
 
 module.exports = router;

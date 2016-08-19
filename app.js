@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var methodOverride = require('method-override');
+var bluebird = require('bluebird');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -15,6 +16,9 @@ var app = express();
 
 // Connect to database
 mongoose.connect('mongodb://localhost/project2');
+
+// Use bluebird to get rid of deprecation warnings
+mongoose.Promise = require('bluebird');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
