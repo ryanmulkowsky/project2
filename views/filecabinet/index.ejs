@@ -12,6 +12,24 @@
   <main>
     <div>
       <h3>File Cabinet:</h3>
+      <% fileCabinet.forEach(function(fileCabinet) { %>
+        <h4>
+          <form method="POST" action="/filecabinet/<%= fileCabinet._id %>?_method=DELETE">
+            <a href="/filecabinet/<%= fileCabinet._id %>">
+              <%= fileCabinet.title + ' - ' + fileCabinet.category + ' - ' + fileCabinet.link %>
+            </a>
+            <button type="submit" class="btn btn-xs btn-danger">Delete</button>
+          </form>
+        </h4>
+      <% }) %>
+    </div>
+    <a href="/filecabinet/new" class="btn btn-primary">New</a>
+  </main>
+
+<!--
+  <main>
+    <div>
+      <h3>File Cabinet:</h3>
       <br>
       <% fileCabinet.forEach(function(fileCabinet) { %>
         <dl class="dl-horizontal">
@@ -22,6 +40,7 @@
       <% }) %>
     </div>
   </main>
+-->
 
   <footer>
     <% include ../partials/footer %>

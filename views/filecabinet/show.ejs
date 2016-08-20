@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body class="container-fluid">
+  <header>
+    <% include ../partials/header %>
+  </header>
+
+  <main>
+    <div>
+      <h3>SHOW</h3>
+      <p><b>Title: </b><%= fileCabinet.title %></p>
+      <p><b>ID: </b><%= fileCabinet._id %></p>
+      <p><b>Category: </b><%= fileCabinet.category %></p>
+      <p><b>Link: </b><a href="<%= fileCabinet.link %>"><%= fileCabinet.link %></p>
+    </div>
+
+    <a href="/filecabinet" class="btn btn-primary">Back</a>
+    <a href="/filecabinet/<%= fileCabinet._id %>/edit" class="btn btn-danger">Edit</a>
+  </main>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>
