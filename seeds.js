@@ -25,9 +25,9 @@ FileCabinet.remove({})
 .then(function() {
   console.log('old file cabinet removed');
   console.log('creating some new file cabinet...');
-  var articleOne     = new FileCabinet({ title: 'Trump is a Moron', category: 'Progressive'});
-  var articleTwo     = new FileCabinet({ title: 'Hillary is a Liar', category: 'Conservative'});
-  var articleThree   = new FileCabinet({ title: 'We Do Not Know Who To Dislike More', category: 'Mainstream'});
+  var articleOne     = new FileCabinet({ title: 'Trump is a Moron', category: 'Progressive', link: 'http://www.motherjones.com/politics/2016/08/donald-trump-will-deliver-foreign-policy-address-ohio/' });
+  var articleTwo     = new FileCabinet({ title: 'Hillary is a Liar', category: 'Conservative', link: 'http://www.breitbart.com/video/2015/12/20/trump-hillary-is-a-liar-she-lies-like-crazy-about-everything/' });
+  var articleThree   = new FileCabinet({ title: 'We Do Not Know Who To Dislike More', category: 'Mainstream', link: 'http://www.cnn.com/2016/08/17/opinions/third-party-chances-brown/' });
   return FileCabinet.create([articleOne, articleTwo, articleThree]);
 })
 .then(function(savedFileCabinet) {

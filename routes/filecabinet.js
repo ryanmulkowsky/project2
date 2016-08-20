@@ -9,18 +9,20 @@ function makeError(res, message, status) {
   return error;
 }
 
+/*
 let fileCabinet = [
   {
     title: 'Clinton going on air with favorite new attack: Trump tax returns',
     category: 'Mainstream',
-    //link:
+    link:
   },
   {
     title: 'Clinton Foundation Will Stop Taking Foreign, Corporate Donations if Hillary Elected',
     category: 'Conservative',
-    //link:
+    link:
   }
 ];
+*/
 
 // INDEX
 router.get('/', function(req, res, next) {
