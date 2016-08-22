@@ -19,16 +19,6 @@ function authenticate(req, res, next) {
   }
 }
 
-/*
-// INDEX
-router.get('/', authenticate, function(req, res, next) {
-  FileCabinet.find({})
-  .then(function(fileCabinet) {
-    res.render('filecabinet/index', { fileCabinet: fileCabinet });
-  });
-});
-*/
-
 // INDEX
 router.get('/', authenticate, function(req, res, next) {
   var fileCabinet = global.currentUser.fileCabinet;
