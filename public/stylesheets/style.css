@@ -10,6 +10,16 @@ a {
   color: #00B7FF;
 }
 
+h3, p {
+  color: black;
+}
+
+form {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
 .glyphicon:before {
   margin-right: 5px;
 }
@@ -35,7 +45,7 @@ a {
 }
 
 .form-group {
-  color: white;
+  color: black;
 }
 
 #logo {
@@ -47,6 +57,8 @@ a {
   text-align: center;
 }
 
-h3, p {
-  color: white;
+#show {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
 }
