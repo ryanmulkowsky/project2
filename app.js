@@ -17,8 +17,28 @@ var fileCabinetRouter = require('./routes/filecabinet');
 
 var app = express();
 
+var uristring =
+process.env.MONGOLAB_URI ||
+process.env.MONGOHQ_URL ||
+process.env.MONGODB_URI ||
+'mongodb://localhost/project2';
+
 // Connect to database
-mongoose.connect('mongodb://localhost/project2');
+mongoose.connect(uristring, function(err, res) {
+ if(err) {
+   console.log('ERROR connecting to: '+uristring+'. '+err);
+ } else {
+   console.log('Succeeded in connecting to: '+uristring);
+ }
+});
+mongoose.connection.on('error', function(err) {
+  console.error('MongoDB connection error: ' + err);
+  process.exit(-1);
+  }
+);
+mongoose.connection.once('open', function() {
+  console.log("Mongoose has connected to MongoDB!");
+});
 
 // Use bluebird to get rid of deprecation warnings
 mongoose.Promise = require('bluebird');

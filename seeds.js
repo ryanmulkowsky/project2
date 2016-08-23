@@ -2,7 +2,28 @@ var mongoose = require('mongoose');
 var FileCabinet = require('./models/filecabinet');
 var bluebird = require('bluebird');
 
-mongoose.connect('mongodb://localhost/project2');
+var uristring =
+process.env.MONGOLAB_URI ||
+process.env.MONGOHQ_URL ||
+process.env.MONGODB_URI ||
+'mongodb://localhost/project2';
+
+// Connect to database
+mongoose.connect(uristring, function(err, res) {
+ if(err) {
+   console.log('ERROR connecting to: '+uristring+'. '+err);
+ } else {
+   console.log('Succeeded in connecting to: '+uristring);
+ }
+});
+mongoose.connection.on('error', function(err) {
+  console.error('MongoDB connection error: ' + err);
+  process.exit(-1);
+  }
+);
+mongoose.connection.once('open', function() {
+  console.log("Mongoose has connected to MongoDB!");
+});
 
 // Use bluebird to get rid of deprecation warnings
 mongoose.Promise = require('bluebird');
