@@ -10,8 +10,10 @@
   </header>
 
   <main>
+    <div class="page-header">
+      <h2>Here Are Your Saved Articles</h2>
+    </div>
     <div>
-      <h3>File Cabinet:</h3>
       <% fileCabinet.forEach(function(fileCabinet) { %>
         <h4>
           <form method="POST" action="/filecabinet/<%= fileCabinet._id %>?_method=DELETE">

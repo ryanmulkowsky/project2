@@ -14,6 +14,17 @@ h3, p {
   color: black;
 }
 
+h2 {
+  text-align: center;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+li {
+  text-align: left;
+}
+
 form {
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -25,12 +36,13 @@ form {
 }
 
 .footer {
-   position: fixed;
+   position: relative;
    left: 0px;
    bottom: 0px;
    height: 60px;
    width: 100%;
    padding: 10px;
+   margin-top: 10px;
    border-radius: 10px;
    background: #f5f5f5;
 }
@@ -61,4 +73,5 @@ form {
   background-color: #f5f5f5;
   border-radius: 10px;
   padding: 10px;
+  margin-bottom: 10px;
 }
