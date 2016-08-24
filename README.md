@@ -37,11 +37,11 @@ I also wanted to create a feature that would allow a user (would would sign-up a
 
 ## Wireframe
 
-Link to my <b>[Mockingbird](http://https://gomockingbird.com/projects/mjja794)</b> Wireframe.
+Link to my <b>[Mockingbird](https://gomockingbird.com/projects/mjja794)</b> Wireframe.
 
 ## Project Planning & User Stories
 
-Link to my <b>[Trello](http://https://trello.com/b/GncHotMA/ga-wdi7-project-2)</b> Board.
+Link to my <b>[Trello](https://trello.com/b/GncHotMA/ga-wdi7-project-2)</b> Board.
 
 ## Unsolved Problems/Major Hurdles
 
